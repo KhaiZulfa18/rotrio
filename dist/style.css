@@ -1,0 +1,43 @@
+/* Variables */
+* {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F8F5F1; }
+
+body {
+  background-color: #F8F5F1; }
+
+.header {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em; }
+
+.profile-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all .2s; }
+  .profile-image:hover {
+    background: #fff no-repeat; }
+
+.profile-title {
+  font-size: 2em;
+  font-weight: bold;
+  position: relative; }
+  .profile-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -40%;
+    border-bottom: 2px solid #45526C;
+    width: 180%; }
+
+.card {
+  background-color: #EBEBEB;
+  border: solid 4px #45526C;
+  border-radius: 0px;
+  box-shadow: 15px 15px 0 -4px #EBEBEB, 15px 15px #45526C; }
+  .card .card-header {
+    font-size: 14px; }
