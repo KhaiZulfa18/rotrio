@@ -1,4 +1,8 @@
 /* Variables */
+$blue: #98E0FF;
+$yellow: #fffdc7;
+$purple: #D5C7FF;
+$army: #B3D2AE;
 $navi: #45526C;
 $green: #5AA897;
 $red: #F8A488;
@@ -7,8 +11,14 @@ $white: #EBEBEB;
 $black: #000000;
 
 $colors : (
-    'primary': #45526C,
-    'success': #5AA897,
-    'danger': #F8A488,
-    'secondary': #F8F5F1
+    'blue': $blue,
+    'yellow': $yellow,
+    'purple': $purple,
+    'army': $army,
+    'navi': $navi,
+    'green': $green,
+    'red': $red,
+    'grey': $grey,
+    'white': $white,
+    'black': $black,
 );
