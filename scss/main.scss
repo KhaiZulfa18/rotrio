@@ -177,3 +177,25 @@ body{
         color: $hex !important;
     }
 }
+
+i {
+    background-color: transparent;
+    color: inherit;
+    font-size: 120%;
+}
+
+.footer{
+    margin: 2em 0em 1em 0em;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+    & &-text{
+        font-family: 'Baloo 2', cursive !important;
+        font-size: 1em;
+        color: $red;
+        text-decoration: bold;
+    }
+}
