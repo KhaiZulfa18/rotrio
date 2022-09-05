@@ -54,7 +54,15 @@ body {
 .card {
   background-color: #EBEBEB;
   border: solid 4px #45526C;
-  border-radius: 0px;
+  border-radius: 0%;
   box-shadow: 15px 15px 0 -4px #EBEBEB, 15px 15px #45526C; }
   .card .card-header {
-    font-size: 14px; }
+    font-size: 12px;
+    height: auto;
+    border: 0%;
+    background-color: #EBEBEB; }
+  .card .card-body {
+    font-size: 13px;
+    background-color: #EBEBEB; }
+    .card .card-body p {
+      background-color: #EBEBEB; }

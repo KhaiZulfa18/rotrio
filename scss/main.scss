@@ -65,20 +65,29 @@ body{
         text-decoration: bold;
     }
 
-    p {
-
-    }
 }
 
 .card {
-    background-color: #EBEBEB;
-    border: solid 4px #45526C;
-    border-radius: 0px;
+    background-color: $white;
+    border: solid 4px $navi;
+    border-radius: 0%;
     box-shadow: 
-        15px 15px 0 -4px #EBEBEB,
-        15px 15px #45526C;
+        15px 15px 0 -4px $white,
+        15px 15px $navi;
     
     & &-header{
-        font-size: 14px;
+        font-size: 12px;
+        height: auto;
+        border: 0%;
+        background-color: $white
+    }
+
+    & &-body{
+        font-size: 13px;
+        background-color: $white;
+
+        p{
+        background-color: $white;
+        }
     }
 }
