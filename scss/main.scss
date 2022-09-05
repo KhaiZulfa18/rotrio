@@ -1,5 +1,5 @@
 @import 'resources/variables';
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Bungee&display=swap');
 
 *{
     font-family: 'Montserrat', sans-serif;
@@ -33,6 +33,7 @@ body{
         transition: all .2s;
         position: absolute;
         left: 50%;
+        border: 5px solid $army;
         transform: translateX(-50%);
         &-front{
             z-index: 99;
@@ -45,9 +46,13 @@ body{
 }
 
 .profile-title {
-    color: $navi;
-    font-size: 1.5em;
+    font-family: 'Bungee', cursive;
+    color: $green;
+    text-stroke: 1px $navi;
+    -webkit-text-stroke: 1px $navi;
+    font-size: 2em;
     position: relative;
+    font-weight: 600;
     margin: 0;
     &::before{
         content : "";
@@ -87,6 +92,7 @@ body{
     box-shadow: 
         15px 15px 0 -4px $grey,
         15px 15px $navi;
+    margin-bottom: 50px;
     
     & &-header{
         font-size: 12px;
@@ -114,7 +120,60 @@ body{
 }
 
 @each $color, $hex in $colors {
-    & .badge-#{$color}{
+    .badge-#{$color}{
         background-color: $hex !important;
+    }
+}
+
+.socmed {
+    font-family: 'Baloo 2', cursive;
+    color: $navi;
+    background-color: $red;
+    border-radius: 0.50rem;
+    padding: 1em 2em;
+    text-align: center; 
+    border: 2px solid $grey;
+    box-shadow: 
+        7px 7px 0 -4px $grey,
+        7px 7px $red;
+    border-bottom: 50px;
+
+    & a{
+        font-family: inherit;
+        color: inherit;
+        text-decoration: none;
+        &:hover{
+            text-decoration: none;
+            transition: all 0.5s;
+        }
+    }
+
+    &:hover{
+        box-shadow: 
+            3px 3px 0 -3px $grey,
+            3px 3px $red;
+        transition: all 0.9s;
+    }
+}
+
+@each $color, $hex in $colors {
+    .socmed-#{$color}{
+        background-color: $hex !important;
+        border: 2px solid $grey;
+        box-shadow: 
+            7px 7px 0 -4px $grey,
+            7px 7px $hex;
+        &:hover{
+            box-shadow: 
+                3px 3px 0 -3px $grey,
+                3px 3px $hex;
+            transition: all 0.9s;
+        }
+    }
+}
+
+@each $color, $hex in $colors {
+    .text-#{$color}{
+        color: $hex !important;
     }
 }
