@@ -3,7 +3,6 @@
 
 *{
     font-family: 'Montserrat', sans-serif;
-    background-color: $grey;
 }
 body{
     background-color: $grey;
@@ -26,8 +25,6 @@ body{
     .avatar-image{
         height: 100px;
         width: 100px;
-        border: 1px solid #000, 
-        1px solid #fff;
         border-radius: 50%;
         object-fit: cover;
         transition: opacity 1s ease-in-out;
@@ -300,7 +297,104 @@ i {
     & &-text{
         font-family: 'Baloo 2', cursive !important;
         font-size: 1em;
-        color: $red;
+        color: $navi;
         text-decoration: bold;
+    }
+}
+
+// dark mode 
+body.dark {
+    background-color: $navi; 
+
+    p {
+        color: $white;
+    }
+
+    .avatar{
+        .avatar-image{
+            box-shadow: 
+                0px 0px 2px 4px $navi,
+                0px 0px 6px 6px $white;
+        }
+    }
+
+    .profile-title{
+        color: $green;
+        text-stroke: 1px $black;
+        -webkit-text-stroke: 1px $black;
+    }
+    
+    .section{
+        & .title{
+            text-stroke: 3px $black;
+            -webkit-text-stroke: 3px $black;
+            text-shadow: 4px 4px 0px $black;
+            color: $green;
+        }
+
+        @each $color, $hex in $colors {
+            & .title-#{$color}{
+                color: $hex !important;
+            }
+        }
+    }
+
+    .card {
+        background-color: $grey;
+        border: solid 4px $black;
+        border-radius: 0%;
+        box-shadow: 
+            15px 15px 0 -4px $grey,
+            15px 15px $black;
+
+        &-header{
+            font-size: 12px;
+            height: auto;
+            border-radius: 0%;
+            border-bottom: 1px solid $navi;
+            background-color: $grey;
+        }
+    
+        &-body{
+            background-color: $grey;
+    
+            & p {
+                font-size: 12px;
+                background-color: $grey;
+                color: $navi;
+            }
+        }
+    }
+
+    .socmed {
+        color: $white;
+        background-color: $red;
+        border: 2px solid $black;
+        box-shadow: 
+            5px 5px 0 -4px $navi,
+            5px 5px $black;
+        
+        &:hover{
+            box-shadow: 
+                3px 3px 0 -3px $navi,
+                3px 3px $black;
+            transition: all 0.9s;
+        }
+    }
+
+    @each $color, $hex in $colors {
+        .socmed-#{$color}{
+            background-color: $hex !important;
+            border: 2px solid $black;
+            box-shadow: 
+                7px 7px 0 -4px $hex,
+                7px 7px $black;
+        }
+    }
+
+    .footer{
+        &-text{
+            color: $grey;
+        }
     }
 }
