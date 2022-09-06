@@ -241,6 +241,54 @@ i {
     font-size: 120%;
 }
 
+.mode{
+    background-color: $grey;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $navi;
+    transition: color, background-color 400ms;
+
+    & button {
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+        border-radius: 9px;
+        padding: 8px;
+    }
+
+    & svg {
+        transition: stroke 400ms;
+        stroke: $navi;
+    }
+
+    & .moon-icon {
+        stroke-dasharray: 0px 1px;
+        opacity: 0;
+        transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
+    }
+
+    & .sun-icon {
+        stroke-dasharray: 1px 1px;
+        opacity: 1;
+        transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
+    }
+
+    & .dark .moon-icon {
+        stroke-dasharray: 1px 1px;
+        opacity: 1;
+    }
+    
+    & .dark .sun-icon {
+        stroke-dasharray: 0px 1px;
+        opacity: 0;
+    }
+}
+
 .footer{
     margin: 2em 0em 1em 0em;
     position: relative;
