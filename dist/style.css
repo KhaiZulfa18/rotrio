@@ -33,6 +33,8 @@ body {
       z-index: 99; }
       .avatar .avatar-image-front:hover {
         opacity: 0; }
+    .avatar .avatar-image-back {
+      z-index: 1; }
 
 .profile-title {
   font-family: 'Bungee', cursive;
@@ -50,6 +52,26 @@ body {
     left: -40%;
     border-bottom: 2px solid #45526C;
     width: 180%; }
+  @media screen and (max-width: 992px) {
+    .profile-title {
+      font-size: 1.8em; }
+      .profile-title::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -20%;
+        border-bottom: 2px solid #45526C;
+        width: 140%; } }
+  @media screen and (max-width: 600px) {
+    .profile-title {
+      font-size: 1.5em; }
+      .profile-title::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -10%;
+        border-bottom: 2px solid #45526C;
+        width: 120%; } }
 
 .section {
   padding: 0 100px; }
@@ -82,6 +104,18 @@ body {
     color: #EBEBEB !important; }
   .section .title-black {
     color: #000000 !important; }
+  @media screen and (max-width: 992px) {
+    .section {
+      padding: 0px 50px; }
+      .section .title {
+        font-size: 1.9em; } }
+  @media screen and (max-width: 600px) {
+    .section {
+      padding: 0px 20px; }
+      .section .title {
+        font-size: 1.7em; }
+      .section p {
+        font-size: 90%; } }
 
 .card {
   background-color: #F8F5F1;
@@ -100,6 +134,9 @@ body {
     .card .card-body p {
       font-size: 12px;
       background-color: #F8F5F1; }
+  @media screen and (max-width: 600px) {
+    .card {
+      margin-right: 10px; } }
 
 .badge {
   padding: 5px 10px;
@@ -146,7 +183,8 @@ body {
   text-align: center;
   border: 2px solid #F8F5F1;
   box-shadow: 7px 7px 0 -4px #F8F5F1, 7px 7px #F8A488;
-  border-bottom: 50px; }
+  border-bottom: 50px;
+  margin: 0em 0.5em 1em 0.5em; }
   .socmed a {
     font-family: inherit;
     color: inherit;
@@ -157,6 +195,12 @@ body {
   .socmed:hover {
     box-shadow: 3px 3px 0 -3px #F8F5F1, 3px 3px #F8A488;
     transition: all 0.9s; }
+  @media screen and (max-width: 992px) {
+    .socmed {
+      margin: 0em 1em 1em 1em; } }
+  @media screen and (max-width: 600px) {
+    .socmed {
+      margin: 0em 2em 1em 2em; } }
 
 .socmed-blue {
   background-color: #98E0FF !important;

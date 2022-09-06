@@ -15,6 +15,7 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 1em;
+    
 }
 
 .avatar{
@@ -42,6 +43,9 @@ body{
                 opacity: 0;
             }
         }
+        &-back{
+            z-index: 1;
+        }
     }
 }
 
@@ -62,6 +66,30 @@ body{
         border-bottom: 2px solid $navi;
         width: 180%;
     }
+
+    @media screen and (max-width: 992px){
+        font-size: 1.8em;
+        &::before{
+            content : "";
+            position: absolute;
+            bottom: 0;
+            left: -20%;
+            border-bottom: 2px solid $navi;
+            width: 140%;
+        }  
+    }
+
+    @media screen and (max-width: 600px){
+        font-size: 1.5em;
+        &::before{
+            content : "";
+            position: absolute;
+            bottom: 0;
+            left: -10%;
+            border-bottom: 2px solid $navi;
+            width: 120%;
+        }  
+    }
 }
 
 .section{
@@ -81,6 +109,23 @@ body{
     @each $color, $hex in $colors {
         & .title-#{$color}{
             color: $hex !important;
+        }
+    }
+
+    @media screen and (max-width: 992px){
+        padding: 0px 50px;
+        & .title {
+            font-size: 1.9em;
+        }
+    }
+    @media screen and (max-width: 600px){
+        padding: 0px 20px;
+        & .title {
+            font-size: 1.7em;
+        }
+        
+        p {
+            font-size: 90%;
         }
     }
 }
@@ -110,6 +155,10 @@ body{
             background-color: $grey;
         }
     }
+
+    @media screen and (max-width: 600px){
+        margin-right: 10px;
+    }
 }
 
 .badge {
@@ -137,6 +186,7 @@ body{
         7px 7px 0 -4px $grey,
         7px 7px $red;
     border-bottom: 50px;
+    margin: 0em 0.5em 1em 0.5em;
 
     & a{
         font-family: inherit;
@@ -153,6 +203,13 @@ body{
             3px 3px 0 -3px $grey,
             3px 3px $red;
         transition: all 0.9s;
+    }
+
+    @media screen and (max-width: 992px){
+        margin: 0em 1em 1em 1em;
+    }
+    @media screen and (max-width: 600px){
+        margin: 0em 2em 1em 2em;
     }
 }
 
