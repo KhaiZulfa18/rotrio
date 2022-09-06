@@ -322,6 +322,10 @@ body.dark {
         color: $green;
         text-stroke: 1px $black;
         -webkit-text-stroke: 1px $black;
+
+        &::before{
+            border-bottom: 2px solid $grey;
+        }
     }
     
     .section{

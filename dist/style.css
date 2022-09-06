@@ -373,6 +373,8 @@ body.dark {
     color: #5AA897;
     text-stroke: 1px #121212;
     -webkit-text-stroke: 1px #121212; }
+    body.dark .profile-title::before {
+      border-bottom: 2px solid #F8F5F1; }
   body.dark .section .title {
     text-stroke: 3px #121212;
     -webkit-text-stroke: 3px #121212;
