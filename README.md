@@ -1,2 +1,5 @@
 # rotrio
-Repository for my profile
+Rotrio is a html template for personal profile with Retro Theme
+
+Build With :
+* SASS
