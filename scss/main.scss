@@ -239,7 +239,7 @@ i {
 }
 
 .mode{
-    background-color: $grey;
+    background-color: transparent;
     position: absolute;
     top: 0;
     right: 0;
@@ -248,42 +248,36 @@ i {
     align-items: center;
     justify-content: center;
     color: $navi;
-    transition: color, background-color 400ms;
+    // transition: color, background-color 400ms;
 
-    & button {
-        border: none;
+    & .mode-button {
         background-color: inherit;
         cursor: pointer;
-        border-radius: 9px;
-        padding: 8px;
+        user-select: none;
+        margin: 0 1em;
+        font-size: 2.5em;
+        transition: all 0.9s;
+        
+        .icon {
+            &-dark{
+                color: $black;
+                // text-shadow: 0px 0px 3px $navi;
+            }
+            &-light{
+                color: $white;
+                text-shadow: 0px 0px 3px $navi;
+            }
+        }
+
+        @media screen and (max-width: 600px){
+            font-size: 1.5em;
+            margin: 0 0.8em;
+        }
     }
 
-    & svg {
-        transition: stroke 400ms;
-        stroke: $navi;
-    }
-
-    & .moon-icon {
-        stroke-dasharray: 0px 1px;
-        opacity: 0;
-        transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
-    }
-
-    & .sun-icon {
-        stroke-dasharray: 1px 1px;
-        opacity: 1;
-        transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
-    }
-
-    & .dark .moon-icon {
-        stroke-dasharray: 1px 1px;
-        opacity: 1;
-    }
-    
-    & .dark .sun-icon {
-        stroke-dasharray: 0px 1px;
-        opacity: 0;
-    }
+    i{
+        font-style: normal;
+    }   
 }
 
 .footer{
