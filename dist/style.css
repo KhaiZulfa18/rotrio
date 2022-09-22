@@ -310,6 +310,44 @@ body {
 .text-black {
   color: #121212 !important; }
 
+.card-music {
+  display: inline-block;
+  width: 100%;
+  border-radius: 4px;
+  padding: 16px;
+  overflow: hidden;
+  background-color: #2d554d;
+  transition: background-color 0.4s;
+  cursor: pointer;
+  margin-bottom: 2rem; }
+  .card-music:hover {
+    background-color: #47887a; }
+  .card-music .cover {
+    position: relative;
+    margin-bottom: 18px; }
+    .card-music .cover img {
+      display: block;
+      border-radius: 10%;
+      width: 100%;
+      box-shadow: 0 8px 20px -4px #0d0d0d; }
+  .card-music .card-info {
+    font-family: 'Baloo 2', cursive;
+    color: #e7ddcf; }
+    .card-music .card-info h4 {
+      color: inherit;
+      margin-bottom: 6px; }
+    .card-music .card-info p {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      height: 1.5em;
+      font-size: 14px;
+      color: inherit; }
+    .card-music .card-info a {
+      color: inherit;
+      text-decoration: none; }
+
 i {
   background-color: transparent;
   color: inherit;

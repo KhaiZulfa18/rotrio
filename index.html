@@ -60,6 +60,21 @@
                 </div>
             </div>
 
+            <div class="text-left title title-army">Recently Listened...</div>
+            <div class="row mb-5">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
+                    <div class="card-music">
+                        <div class="cover">
+                            <img src="https://i.scdn.co/image/ab67616d00001e026b66ed1cb49053071789eaa4" alt="">
+                        </div>
+                        <div class="card-info">
+                            <h4><a href="" target="_blank">Still on My Mind</a></h4>
+                            <p><a href="#" target="_blank">Dido</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="text-center title title-red">Reach Me!</div>
             <div class="row mb-5">
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
@@ -92,6 +107,42 @@
             document.getElementById('icon-dark').classList.toggle("d-none");
             document.getElementById('icon-light').classList.toggle("d-none");
         });
+
+        // const token = "BQCjhm5FMDezmfDRH5nd_zQTdMujh_mJRS11xDdWsie0Xmry2rVRduqMs30bvm__LKjp2tTv3X_ZyW6B0XZQ5SIxiXHMiUA0wZDOb7KsuwB2p6NdU_8QSeaA9q7a7DAg6WqHvWKfW7sp3EonlkS_ZMgbW5jI9qcfs2RnXnbxCOotZRnt1sRnqINYxJ-SqP3nMZ7usaLr-Y0";
+        // const url = "https://api.spotify.com/v1/me/player/recently-played";
+
+        // fetch(url+'?limit=1', {
+        //     method: "GET",
+        //     headers: new Headers({
+        //         'Authorization': 'Bearer ' + token
+        //     })
+        // })
+        // .then(response => response.json())
+        // .then((json) => {
+        //     var [items] = json.items;
+        //     track = items.track;
+        //     var [artists] = track.artists;
+
+        //     let html = `
+        //     <div class="text-left title title-army">Recently Listened...</div>
+        //     <div class="row">
+        //         <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
+        //             <div class="card-music">
+        //                 <div class="cover">
+        //                     <img src="${track.album.images[1].url}" alt="">
+        //                 </div>
+        //                 <div class="card-info">
+        //                     <h4><a href="${track.external_urls.spotify}" target="_blank">${track.name}</a></h4>
+        //                     <p><a href="${artists.external_urls.spotify}" target="_blank">${artists.name}</a></p>
+        //                     <p><a href="https://open.spotify.com/"><i class="fab fa-spotify"></i>&nbsp;Spotify</a></p>
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     </div>
+        //     `;
+
+        //     document.getElementById('music').innerHTML = html;
+        // });
     </script>
 </body>
 </html>
