@@ -92,6 +92,26 @@
             document.getElementById('icon-dark').classList.toggle("d-none");
             document.getElementById('icon-light').classList.toggle("d-none");
         });
+
+        const entry_id = 2561195;
+
+        const fpl = async (entry_id) => {
+            const entry_url = `https://fantasy.premierleague.com/api/entry/${entry_id}/`;
+
+            const response = await fetch(entry_url, {
+                method: 'GET',
+                headers: {
+                    accept: 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                },
+            });
+
+            const result = await response.json();
+
+            console.log(result);
+        }
+
+        fpl(entry_id);
     </script>
 </body>
 </html>
