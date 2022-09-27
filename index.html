@@ -71,6 +71,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
                     <div class="socmed socmed-red text-black"><a href="https://www.twitter.com/kaizuro_" target="_blank"><i class="fa fa-envelope"></i>&nbsp;khaizulfa18@gmail.com</a></div>
                 </div>
+                <div id="fpl" class="col-lg-4 col-md-6 col-sm-12 mb-2">
+                </div>
             </div>
         </div>
 
@@ -93,22 +95,22 @@
             document.getElementById('icon-light').classList.toggle("d-none");
         });
 
+        const proxy_url = "https://circumvent-cors.herokuapp.com/";
+        const base_url = "https://fantasy.premierleague.com/api/";
         const entry_id = 2561195;
 
         const fpl = async (entry_id) => {
-            const entry_url = `https://fantasy.premierleague.com/api/entry/${entry_id}/`;
-
+            const entry_url = `${proxy_url}${base_url}/entry/${entry_id}/`;
             const response = await fetch(entry_url, {
-                method: 'GET',
-                headers: {
-                    accept: 'application/json',
-                    'Access-Control-Allow-Origin': '*'
-                },
+                method: 'GET'
             });
 
             const result = await response.json();
 
-            console.log(result);
+            var html = `
+                <div class="socmed socmed-army text-black"><a href="https://fantasy.premierleague.com/" target="_blank">FPL OR : ${result.summary_overall_rank.toLocaleString()} (${result.summary_overall_points.toLocaleString()}Pts)</a></div>
+            `;
+            document.getElementById('fpl').innerHTML = html;
         }
 
         fpl(entry_id);
