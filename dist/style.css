@@ -3,8 +3,14 @@
 * {
   font-family: 'Montserrat', sans-serif; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   background-color: #F8F5F1; }
+
+a {
+  text-decoration: none; }
 
 .header {
   height: 200px;
