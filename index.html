@@ -20,8 +20,8 @@
                 </div>
             </div>
             <div class="avatar">
-                <img class="avatar-image avatar-image-front" src="asset/1.jpeg" alt="profile-image-back">
-                <img class="avatar-image avatar-image-back" src="asset/2.jpeg" alt="profile-image-back">
+                <img class="avatar-image avatar-image-front" src="asset/4.jpeg" alt="profile-image-back">
+                <img class="avatar-image avatar-image-back" src="asset/3.jpeg" alt="profile-image-back">
             </div>
             <div class="profile-title">Khaizuddin Zulfa</div>
         </div>
@@ -45,7 +45,7 @@
                     <div class="card">
                         <div class="card-header">2019</div>
                         <div class="card-body">
-                            <h5 class="text-bold">Junior Developer</h5>
+                            <h5 class="text-bold">Junior Programmer</h5>
                             <p>School Of Parenting</p>
                             <p>Developing Web-Based Applications</p>
                             <div class="badge badge-green">Semarang</div>
@@ -57,7 +57,7 @@
                     <div class="card">
                         <div class="card-header">2020-Now</div>
                         <div class="card-body">
-                            <h5 class="text-bold">Junior Developer</h5>
+                            <h5 class="text-bold">Programmer</h5>
                             <p>TSP Group</p>
                             <p>Developing Web-Based Production Applications</p>
                             <div class="badge badge-green">Semarang</div>
@@ -70,15 +70,13 @@
             <div class="text-center title title-red" id="reach-me">Reach Me!</div>
             <div class="row mb-5">
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
-                    <div class="socmed socmed-blue text-black"><a href="https://www.twitter.com/kaizuro_" target="_blank"><i class="fab fa-twitter"></i>&nbsp;@kaizuro_</a></div>
+                    <div class="socmed socmed-blue text-navi"><a href="https://www.twitter.com/kaizuro_" target="_blank"><i class="fab fa-twitter"></i>&nbsp;@kaizuro_</a></div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
                     <div class="socmed socmed-navi text-grey"><a href="https://www.github.com/KhaiZulfa18" target="_blank"><i class="fab fa-github"></i>&nbsp;KhaiZulfa18</a></div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
-                    <div class="socmed socmed-red text-black"><a href="https://www.twitter.com/kaizuro_" target="_blank"><i class="fa fa-envelope"></i>&nbsp;khaizulfa18@gmail.com</a></div>
-                </div>
-                <div id="fpl" class="col-lg-4 col-md-6 col-sm-12 mb-2">
+                    <div class="socmed socmed-red text-white"><a href="https://www.intagram.com/khaizulfa_" target="_blank"><i class="fab fa-instagram"></i>&nbsp;@khaizulfa_</a></div>
                 </div>
             </div>
         </div>
@@ -101,26 +99,6 @@
             document.getElementById('icon-dark').classList.toggle("d-none");
             document.getElementById('icon-light').classList.toggle("d-none");
         });
-
-        const proxy_url = "https://circumvent-cors.herokuapp.com/";
-        const base_url = "https://fantasy.premierleague.com/api/";
-        const entry_id = 2561195;
-
-        const fpl = async (entry_id) => {
-            const entry_url = `${proxy_url}${base_url}/entry/${entry_id}/`;
-            const response = await fetch(entry_url, {
-                method: 'GET'
-            });
-
-            const result = await response.json();
-
-            var html = `
-                <div class="socmed socmed-army text-black"><a href="https://fantasy.premierleague.com/" target="_blank">FPL OR : ${result.summary_overall_rank.toLocaleString()} (${result.summary_overall_points.toLocaleString()}Pts)</a></div>
-            `;
-            document.getElementById('fpl').innerHTML = html;
-        }
-
-        fpl(entry_id);
     </script>
 </body>
 </html>
